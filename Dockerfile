@@ -11,8 +11,8 @@ WORKDIR /app/toolapi
 # 基础镜像已经包含pip组件
 RUN apk update \
     && mkdir -p /app/toolapi \
-    && apk add git \
-    && git clone https://github.com/AragonSnow/toolapi.git /app/toolapi \
+    && apk add --no-cache git \
+    && git clone https://github.com/q123458384/toolapi.git /app/toolapi \
     && pip3 install --no-cache-dir -r requirements.txt
 
    
